@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>RELACK</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/cropperjs/dist/cropper.min.css"
+    />
+    <link rel="icon" href="../assets/main.png" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="slidebar">
+        <div class="logo">
+          <button class="menu-btn" id="menu-close">
+            <i class="bx bx-log-out-circle"></i>
+          </button>
+          <img src="../assets/logo.png" alt="RELACK Logo" class="logo-img" />
+          <a href="index.html" onclick="location.reload()" translate="no"
+            >RELACK</a
+          >
+        </div>
+
+        <div class="menu">
+          <h5>Menu</h5>
+          <ul>
+            <li>
+              <i class="bx bxs-bolt-circle"></i>
+              <a href="../Explore/explore.html">Explore</a>
+            </li>
+            <li id="genres-icon">
+              <i class="bx bxs-volume-full"></i>
+              <a href="#">Genres</a>
+            </li>
+            <li>
+              <i class="bx bxs-album"></i>
+              <a href="#">Albums</a>
+            </li>
+            <li id="artist-icon">
+              <i class="bx bxs-microphone"></i>
+              <a href="#">Artsist</a>
+            </li>
+            <li>
+              <i class="bx bxs-radio"></i>
+              <a href="#">Podcast</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu">
+          <h5>Library</h5>
+          <ul>
+            <li>
+              <i class="bx bx-undo"></i>
+              <a href="#">Recent</a>
+            </li>
+            <li>
+              <i class="bx bxs-photo-album"></i>
+              <a href="#">Albums</a>
+            </li>
+            <li>
+              <i class="bx bxs-heart"></i>
+              <a href="#">Favourite</a>
+            </li>
+            <li>
+              <i class="bx bxs-folder"></i>
+              <a href="#">Local</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu">
+          <h5>Playlist</h5>
+          <ul>
+            <li>
+              <i class="bx bxs-plus-square"></i>
+              <a href="#">Create New</a>
+            </li>
+            <li>
+              <i class="bx bxs-caret-right-circle"></i>
+              <a href="#">Best of 2025</a>
+            </li>
+            <li>
+              <i class="bx bxs-caret-right-circle"></i>
+              <a href="#">Best of 2024</a>
+            </li>
+            <li>
+              <i class="bx bxs-music"></i>
+              <a href="#" id="my-playlist">My Playlist</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="playing">
+          <div class="top">
+            <img
+              src="https://i.pinimg.com/564x/ac/f4/68/acf4682de9b6a953fc47a5dfcf8d7606.jpg"
+              alt=""
+            />
+            <h4>Apple <br />Homepod</h4>
+          </div>
+          <div class="bottom">
+            <i class="bx bx-podcast"></i>
+            <p translate="no">Playing on Device</p>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <header>
+          <div class="nav-links">
+            <button class="menu-btn" id="menu-open">
+              <i class="bx bx-menu"></i>
+            </button>
+            <a href="#">Music</a>
+            <a href="#">Live</a>
+            <a href="#">Podcast</a>
+          </div>
+
+          <div class="search">
+            <i class="bx bx-search" id="search-icon"></i>
+            <input type="text" placeholder="Write code here to search" />
+          </div>
+        </header>
+
+        <div class="trending">
+          <div class="left">
+            <h5 title="Trending Song in RELACK">Trending New Song</h5>
+            <div class="info">
+              <h2 translate="no">Tháng 6</h2>
+              <h4 translate="no">NamS Hip Hop</h4>
+              <h5 translate="no">100+ Plays</h5>
+              <div class="buttons">
+                <button class="listen_now">Listen Now</button>
+                <i class="bx bxs-heart"></i>
+              </div>
+            </div>
+          </div>
+          <img
+            src="https://wallpaperwaifu.com/wp-content/uploads/2023/06/eru-chitanda-hyouka-thumb.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="playlist">
+          <div class="genres">
+            <div class="header">
+              <h5 id="title">Genres</h5>
+              <a id="see-all-artists" style="cursor: pointer">See all</a>
+            </div>
+            <div class="items" id="playlist-items">
+              <div class="item">
+                <p>Electro<br />Pop</p>
+              </div>
+              <div class="item">
+                <p>Dance<br />Beat</p>
+              </div>
+              <div class="item">
+                <p>Clubhouse<br />Remix</p>
+              </div>
+              <div class="item">
+                <p>Hip Hop<br />Rap</p>
+              </div>
+              <div class="item">
+                <p>Chill<br />Lo-fi</p>
+              </div>
+              <div class="item">
+                <p>Alternative<br />Indie</p>
+              </div>
+              <div class="item">
+                <p>Blues<br />Soul</p>
+              </div>
+              <div class="item">
+                <p>Cloud<br />Music</p>
+              </div>
+              <div class="item">
+                <p>Ambient<br />Chillout</p>
+              </div>
+              <div class="item">
+                <p>Downtempo<br />Jazz</p>
+              </div>
+            </div>
+          </div>
+          <div class="music-list">
+            <div class="header">
+              <h5 title="Top songs RELACK">Top Songs</h5>
+              <a href="#" id="see-all" title="See all hidden songs">See all</a>
+            </div>
+            <div class="items">
+              <div class="item" data-video-id="01aIUNY-Lp0">
+                <div class="info">
+                  <p>01</p>
+                  <img
+                    src="https://i.pinimg.com/736x/3a/c5/ba/3ac5ba444aafa87100ce41e8093bac0b.jpg"
+                    alt=""
+                  />
+                  <div class="details">
+                    <h5 translate="no">Falls In Luv</h5>
+                    <p translate="no">Côngg</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>01:41</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item" data-video-id="pRXEfO-KYZE">
+                <div class="info">
+                  <p>02</p>
+                  <img
+                    src="https://i.pinimg.com/564x/7b/fc/ad/7bfcad8c89a28f48e383b8f0361bb5f8.jpg"
+                    alt=""
+                  />
+                  <div class="details">
+                    <h5 translate="no">Trốn Khỏi Thành Phố</h5>
+                    <p translate="no">hunti.</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>02:01</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item">
+                <div class="info">
+                  <p>03</p>
+                  <img
+                    src="https://i.pinimg.com/564x/a6/0a/aa/a60aaaa48e4b69fe9af18a6bcfc4f0f0.jpg"
+                    alt=""
+                  />
+                  <div class="details">
+                    <h5 translate="no">Áng Mây</h5>
+                    <p translate="no">Vic ft. Tibicon</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>02:13</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item">
+                <div class="info">
+                  <p>04</p>
+                  <img
+                    src="https://i.pinimg.com/564x/f6/05/d6/f605d6ffd205409ecd71379017fe078f.jpg"
+                    alt=""
+                  />
+                  <div class="details">
+                    <h5 translate="no">Phía Cuối Con Đường</h5>
+                    <p translate="no">Tibicon ft. Vic</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>02:57</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item">
+                <div class="info">
+                  <p>05</p>
+                  <img
+                    src="https://i.pinimg.com/736x/c5/e2/03/c5e203e5653990c410a6717a63a8ef4c.jpg"
+                    alt=""
+                  />
+                  <div class="details">
+                    <h5 translate="no">Vì Em Đó</h5>
+                    <p translate="no">Hades</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>03:27</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item">
+                <div class="info">
+                  <p>06</p>
+                  <img
+                    src="https://i.pinimg.com/564x/d6/99/a6/d699a65785f132e035539abf5b3d440f.jpg"
+                    alt=""
+                  />
+                  <div class="details">
+                    <h5 translate="no">Chặng Cuối Thu</h5>
+                    <p translate="no">Vân Anh ft. Thanh</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>03:04</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item">
+                <div class="info">
+                  <p>07</p>
+                  <img
+                    src="https://i.pinimg.com/736x/6e/60/69/6e6069b84ad7f3d5b42074584a8a46e8.jpg"
+                    alt=""
+                  />
+                  <div class="details">
+                    <h5 translate="no">Không Giờ</h5>
+                    <p translate="no">Hades</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>02:44</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item">
+                <div class="info">
+                  <p>08</p>
+                  <img
+                    src="https://wallpaperwaifu.com/wp-content/uploads/2023/06/eru-chitanda-hyouka-thumb.jpg"
+                    alt=""
+                  />
+                  <div class="details">
+                    <h5 translate="no">Tháng 6</h5>
+                    <p translate="no">NamS Hip Hop</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>02:25</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <!-- Bài hát ẩn -->
+              <div class="item hidden" data-video-id="3tmd-ClpJxA">
+                <div class="info">
+                  <p>09</p>
+                  <img
+                    src="https://i.pinimg.com/736x/68/d4/a2/68d4a2b53a5bdf2003e82316c74d0138.jpg"
+                    alt=""
+                  />
+                  <div class="details">
+                    <h5 translate="no">Vấn Vương</h5>
+                    <p translate="no">Tris ft. Specter</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>02:36</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item hidden" data-video-id="3tmd-ClpJxA">
+                <div class="info">
+                  <p>10</p>
+                  <img
+                    src="https://i.pinimg.com/736x/d1/af/78/d1af7827ab96dba7e58af6ef27545129.jpg"
+                    alt=""
+                    data-video-id="fmBMJKCU5jg"
+                  />
+                  <div class="details">
+                    <h5 translate="no">Sự Chia Rẽ</h5>
+                    <p translate="no">Hades</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>02:59</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item hidden" data-video-id="3tmd-ClpJxA">
+                <div class="info">
+                  <p>11</p>
+                  <img
+                    src="https://i.pinimg.com/736x/69/c7/2d/69c72d7d402a200d2e5c84dee0bb176e.jpg"
+                    alt=""
+                    data-video-id="KjvVnMm2ydI"
+                  />
+                  <div class="details">
+                    <h5 translate="no">KISSMAS</h5>
+                    <p translate="no">Zenos, Lucius, PiPi, Daaran, KENNY</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>03:58</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item hidden" data-video-id="3tmd-ClpJxA">
+                <div class="info">
+                  <p>12</p>
+                  <img
+                    src="https://i.pinimg.com/736x/9c/47/ef/9c47efb3a0e8f42d4d08e61f26125bf1.jpg"
+                    alt=""
+                    data-video-id="fqx8o3wV3_k"
+                  />
+                  <div class="details">
+                    <h5 translate="no">Lối Xưa</h5>
+                    <p translate="no">Dakey</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>02:06</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item hidden" data-video-id="3tmd-ClpJxA">
+                <div class="info">
+                  <p>13</p>
+                  <img
+                    src="https://i.pinimg.com/736x/da/a3/9a/daa39af1b43ab364689c89ec9f99740f.jpg"
+                    alt=""
+                    data-video-id="2Jc7pYtDYNI"
+                  />
+                  <div class="details">
+                    <h5 translate="no">Vì Em</h5>
+                    <p translate="no">Dakey ft. borNGX</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>02:59</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item hidden" data-video-id="3tmd-ClpJxA">
+                <div class="info">
+                  <p>14</p>
+                  <img
+                    src="https://i.pinimg.com/736x/8b/f5/da/8bf5da6ad29c43fba81fd934b5219cb5.jpg"
+                    alt=""
+                    data-video-id="PdYkq4AMYkM"
+                  />
+                  <div class="details">
+                    <h5 translate="no">Đi Qua Hoa Cúc</h5>
+                    <p translate="no">TeA ft. VoVanDuc</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>04:09</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+              <div class="item hidden" data-video-id="3tmd-ClpJxA">
+                <div class="info">
+                  <p>15</p>
+                  <img
+                    src="https://i.pinimg.com/736x/dc/48/8b/dc488b7911f41fc09a6add0db60a836d.jpg"
+                    alt=""
+                    data-video-id="Z4Dn5-vqBxI"
+                  />
+                  <div class="details">
+                    <h5 translate="no">Hoa Bằng Lăng</h5>
+                    <p translate="no">Kidz</p>
+                  </div>
+                </div>
+                <div class="actions">
+                  <p>02:37</p>
+                  <div class="icon">
+                    <i class="bx bxs-right-arrow"></i>
+                  </div>
+                  <i class="bx bxs-plus-square"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="right-section">
+        <div class="profile">
+          <i class="bx bx-moon" id="theme-toggle" title="moon"></i>
+          <i class="bx bxs-bell" id="bell" title="notification"></i>
+          <i class="bx bxs-cog" id="cog" title="settings"></i>
+          <i class="bx bx-upload" id="upload-icon" title="Tải lên bài hát"></i>
+          <div id="logged-in" style="display: none">
+            <div class="user">
+              <div class="left">
+                <img
+                  id="userAvatar"
+                  src="../assets/quat.png"
+                  alt="userAvatar"
+                />
+              </div>
+              <div class="right" alt="right">
+                <h5 id="username" alt="username">QuatNOSimp</h5>
+              </div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="logout" title="log-out"></i>
+          <div id="not-logged-in">
+            <i class="bx bx-user" id="login-icon" title="Đăng nhập"></i>
+          </div>
+          <!-- Modal tải lên bài hát -->
+          <div id="upload-modal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Tải lên bài hát</h2>
+              <form id="upload-form">
+                <label for="videoId">ID video YouTube:</label>
+                <input type="text" id="videoId" name="videoId" required />
+
+                <label for="songImage">Ảnh bài hát:</label>
+                <input
+                  type="file"
+                  id="songImage"
+                  name="songImage"
+                  accept="image/*"
+                  required
+                />
+
+                <label for="songTitle">Tên bài hát:</label>
+                <input type="text" id="songTitle" name="songTitle" required />
+
+                <label for="songArtist">Nghệ sĩ:</label>
+                <input type="text" id="songArtist" name="songArtist" required />
+
+                <label for="songCode">Code bài hát:</label>
+                <input type="text" id="songCode" name="songCode" required />
+
+                <div class="visibility">
+                  <label>
+                    <input
+                      type="radio"
+                      name="visibility"
+                      value="public"
+                      checked
+                    />
+                    Public
+                  </label>
+                  <label>
+                    <input type="radio" name="visibility" value="private" />
+                    Private
+                  </label>
+                </div>
+                <button type="submit">Lưu</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="music-player">
+          <div class="top-section">
+            <div class="header">
+              <h5>Player</h5>
+              <i class="bx bxs-playlist"></i>
+            </div>
+            <div class="song-info">
+              <img
+                src="https://i.pinimg.com/736x/90/4e/6c/904e6c3899a0fc979149e1aa9abf4ed1.jpg"
+                alt=""
+              />
+              <div class="description">
+                <h3 translate="no">Ngọt Như Ly Soda</h3>
+                <h5 translate="no">Nmọc ft. Notcool</h5>
+                <p translate="no">Best of 2025</p>
+              </div>
+              <div class="progress">
+                <p class="current-time">00:00</p>
+                <div class="progress-bar">
+                  <div class="active-line"></div>
+                  <div class="deactive-line"></div>
+                </div>
+                <p class="total-time">01:09</p>
+              </div>
+            </div>
+          </div>
+          <div class="player-actions">
+            <div class="buttons">
+              <i class="bx bxs-alarm"></i>
+              <i class="bx bx-repeat"></i>
+              <i class="bx bx-first-page"></i>
+              <i class="bx bxs-right-arrow play-button"></i>
+              <i class="bx bx-last-page"></i>
+              <i class="bx bx-transfer-alt"></i>
+              <div class="volume-container">
+                <i class="bx bx-volume-full" id="volume-icon"></i>
+                <div class="volume-slider-wrapper">
+                  <input
+                    type="range"
+                    id="volume-slider"
+                    min="0"
+                    max="100"
+                    value="100"
+                    class="volume-slider"
+                  />
+                </div>
+              </div>
+              <div id="alarm-options-modal" class="modal">
+                <div class="modal-content">
+                  <span class="close" id="close-alarm-options">&times;</span>
+                  <h2>Chọn tùy chọn</h2>
+                  <button id="set-alarm-time">Chọn giờ báo thức</button>
+                  <button id="adjust-speed">Điều chỉnh tốc độ phát</button>
+                </div>
+              </div>
+            </div>
+            <input type="text" id="alarmTime" style="display: none" />
+            <div class="lyrics">
+              <i class="bx bx-chevron-up"></i>
+              <h5>Lyrics</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="youtube-player"></div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h5>About Us</h5>
+          <p>
+            RELACK is where we release music that is not widely known to the
+            public and has been copyrighted by the artists who uploaded the
+            music.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="../Explore/explore.html">Explore</a></li>
+            <li><a href="../Introduction/intro.html">Introduction</a></li>
+            <li><a href="../Contact/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/jackdevilvn"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a href="https://x.com/quatttkhongbuon"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/quatttkhongbuon1102/"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com/@tranjackrobloxvn1102"
+              ><i class="bx bxl-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 RELACK. All rights reserved.</p>
+      </div>
+    </footer>
+    <div id="settings-modal" class="modal">
+      <div class="modal-content">
+        <span class="close close-modal" id="close-modal">&times;</span>
+        <h2>Account Settings</h2>
+        <form id="settings-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username-input" name="username" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="avatar">Ảnh giao diện:</label>
+          <input
+            type="file"
+            id="avatar-upload"
+            name="avatar"
+            accept="image/*"
+          />
+
+          <div class="gender-container">
+            <h3 class="gender-title">Select Your Gender</h3>
+            <div class="gender-options">
+              <label class="gender-option male">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  class="gender-input"
+                />
+                <div class="gender-content">
+                  <i class="bx bx-male-sign gender-icon"></i>
+                  <span>Male</span>
+                </div>
+              </label>
+              <label class="gender-option female">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  class="gender-input"
+                />
+                <div class="gender-content">
+                  <i class="bx bx-female-sign gender-icon"></i>
+                  <span>Female</span>
+                </div>
+              </label>
+              <label class="gender-option other">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="other"
+                  class="gender-input"
+                />
+                <div class="gender-content">
+                  <i class="bx bx-planet gender-icon"></i>
+                  <span>Other</span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script src="songs-data.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://unpkg.com/cropperjs/dist/cropper.min.js"></script>
+    <div id="iframe-player" style="display: none"></div>
+    <div id="youtube-player"></div>
+  </body>
+</html>
