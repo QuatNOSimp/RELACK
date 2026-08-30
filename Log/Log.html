@@ -1,1 +1,82 @@
+<!-- File form.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - RELACK</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="icon" href="../assets/logo.png">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-image"></div>
 
+    <!-- Login Form -->
+    <form class="form" id="loginForm">
+        <div class="form-title"><span>Login to your Account</span></div>
+        <div class="title-2"><span>RELACK</span></div>
+        <div class="input-container">
+            <input class="input-mail" type="text" id="loginUsername" placeholder="Username" required>
+        </div>
+        <div class="input-container password-container">
+            <input class="input-pwd" type="password" id="loginPassword" placeholder="Password" required>
+            <i class="bx bx-hide toggle-password"></i>
+        </div>
+        <button type="submit" class="submit">
+            <span class="sign-text">Sign in</span>
+        </button>
+        <p class="signup-link">No account? <a href="#" id="showRegister">Register</a></p>
+        <p class="signup-link" id="forgot-pass">Forgot Password? <a href="#" id="showForgotPassword">Change</a></p>
+        <div class="social-login">
+            <div class="divider">Or continue with</div>
+            <div class="social-icons">
+                <a href="#" class="social-icon google">
+                    <i class="bx bxl-google"></i>
+                </a>
+                <a href="#" class="social-icon github">
+                    <i class="bx bxl-github"></i>
+                </a>
+            </div>
+        </div>
+    </form>
+
+    <!-- Register Form -->
+    <form class="form" id="registerForm" style="display: none;">
+        <div class="form-title"><span>Create new Account</span></div>
+        <div class="title-2"><span>RELACK</span></div>
+        <div class="input-container">
+            <input class="input-mail" type="text" id="registerUsername" placeholder="Username" required>
+        </div>
+        <div class="input-container password-container">
+            <input class="input-pwd" type="password" id="registerPassword" placeholder="Password" required>
+            <i class="bx bx-hide toggle-password"></i>
+        </div>
+        <div class="input-container">
+            <input class="input-img" type="file" id="avatarUpload" accept="image/jpeg, image/png, image/gif, image/jpg" required>
+        </div>
+        <button type="submit" class="submit">
+            <span class="sign-text">Register</span>
+        </button>
+        <p class="signup-link">Already have account? <a href="#" id="showLogin">Sign in!</a></p>
+    </form>
+
+    <!-- Forgot Password form -->
+    <form class="form" id="forgotPasswordForm" style="display: none;">
+        <div class="form-title"><span>Reset Your Password</span></div>
+        <div class="title-2"><span>RELACK</span></div>
+        <div class="input-container">
+            <input class="input-mail" type="text" id="forgotUsername" placeholder="Username" required>
+        </div>
+        <div class="input-container password-container">
+            <input class="input-pwd" type="password" id="newPassword" placeholder="New Password" required>
+            <i class="bx bx-hide toggle-password"></i>
+        </div>
+        <button type="submit" class="submit">
+            <span class="sign-text">Reset Password</span>
+        </button>
+        <p class="signup-link">Remember password? <a href="#" id="showLoginFromForgot">Sign in!</a></p>
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>
