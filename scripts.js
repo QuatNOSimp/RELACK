@@ -485,12 +485,12 @@ const codeSongs = [
     codesngs: "04110",
   },
   {
-    title: "Túy",
-    artist: "ToFu, Xesi, Namlee, VoVanDuc",
-    videoId: "ivzD5ib_Bbk",
+    title: "Thành Phố Đón Mưa Về",
+    artist: "Urabe ft. PC",
+    videoId: "C3TGUP6jmK0",
     imageUrl:
       "https://i.pinimg.com/736x/29/1b/15/291b15a9aa2f760674e52338cac04e4b.jpg",
-    duration: "03:57",
+    duration: "02:29",
     codesngs: "04210",
   },
   {
@@ -926,12 +926,12 @@ const codeSongs = [
     codesngs: "09010",
   },
   {
-    title: "Tháp Trap Tự Do",
-    artist: "Obito",
-    videoId: "ealfjTQEI4Q",
+    title: "Em Thích",
+    artist: "Seanpoet ft. Lửa",
+    videoId: "WDA7OIXXW1U",
     imageUrl:
       "https://i.pinimg.com/736x/f6/94/53/f69453f9484986ff5cd1c7f1b49632e4.jpg",
-    duration: "02:29",
+    duration: "02:59",
     codesngs: "09110",
   },
   {
@@ -1176,6 +1176,42 @@ const codeSongs = [
       "https://i.pinimg.com/736x/03/99/3d/03993d5bc90a8482195c17f27bd4a3ca.jpg",
     duration: "02:57",
     codesngs: "11810",
+  },
+  {
+    title: "Muốn Được Cùng Em",
+    artist: "Freaky ft. Quỳnh Gai",
+    videoId: "BZYp-6D0SDY",
+    imageUrl:
+      "https://i.pinimg.com/736x/2d/41/ca/2d41cae88f26d3c4b6acedcf950fe9ba.jpg",
+    duration: "03:29",
+    codesngs: "11910",
+  },
+  {
+    title: "Những Dòng Tin Nhắn",
+    artist: "Minh Huy ft. Pinny",
+    videoId: "mw9h6THQhRM",
+    imageUrl:
+      "https://i.pinimg.com/736x/30/16/68/3016685c6650f8a5743f99d1ee44b404.jpg",
+    duration: "04:22",
+    codesngs: "12010",
+  },
+  {
+    title: "Anh Không Buồn Như Em Nghĩ",
+    artist: "Kis",
+    videoId: "f0931LSBGfA",
+    imageUrl:
+      "https://i.pinimg.com/736x/dd/4c/1e/dd4c1e6987a8290e2b17653ea521fb7c.jpg",
+    duration: "04:01",
+    codesngs: "12110",
+  },
+  {
+    title: "Em Thấm Vào Anh Chưa?",
+    artist: "Ron Phan ft. Lê Hà",
+    videoId: "mh38m_O3-7Q",
+    imageUrl:
+      "https://i.pinimg.com/736x/a4/94/35/a49435542de132a3154ed1cef9e5d655.jpg",
+    duration: "03:27",
+    codesngs: "12210",
   },
 ];
 
