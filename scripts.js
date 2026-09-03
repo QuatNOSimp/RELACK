@@ -1213,6 +1213,24 @@ const codeSongs = [
     duration: "03:27",
     codesngs: "12210",
   },
+  {
+    title: "Nói Theo 1 Cách Khác",
+    artist: "Anzz",
+    videoId: "OnojF3JL3Tw",
+    imageUrl:
+      "https://i.pinimg.com/736x/b9/7b/63/b97b63e066aeb8a98d2ca2e74299b97f.jpg",
+    duration: "03:27",
+    codesngs: "12310",
+  },
+  {
+    title: "Trồng Cây Simp",
+    artist: "Anzz",
+    videoId: "4iGvZXsE2QY",
+    imageUrl:
+      "https://i.pinimg.com/736x/b7/e7/7f/b7e77f9592887100a13164a78e444468.jpg",
+    duration: "02:14",
+    codesngs: "12410",
+  },
 ];
 
 const genres = [
