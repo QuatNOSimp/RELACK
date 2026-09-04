@@ -1164,7 +1164,7 @@ const codeSongs = [
     artist: "PC",
     videoId: "T9y3DP0aHDM",
     imageUrl:
-      "https://i.pinimg.com/736x/d5/9f/57/d59f57f0c3fbfa941d2d6818be036207.jpg",
+      "https://i.pinimg.com/736x/fb/b4/37/fbb43778844c5c5d08e11c865d116df5.jpg",
     duration: "04:29",
     codesngs: "11710",
   },
@@ -1230,6 +1230,33 @@ const codeSongs = [
       "https://i.pinimg.com/736x/b7/e7/7f/b7e77f9592887100a13164a78e444468.jpg",
     duration: "02:14",
     codesngs: "12410",
+  },
+  {
+    title: "Gọi Anh Là Gió",
+    artist: "Gió",
+    videoId: "QTTDzkzmE4E",
+    imageUrl:
+      "https://i.pinimg.com/736x/fe/34/f1/fe34f14a6b3dcbe94747fda54b78c214.jpg",
+    duration: "02:03",
+    codesngs: "12510",
+  },
+  {
+    title: "Gió Ấm",
+    artist: "Milly ft. Rocky CDE",
+    videoId: "jlJAmTwpTDU",
+    imageUrl:
+      "https://i.pinimg.com/1200x/61/be/9e/61be9e9d67551b1889c83e787ea3d9bb.jpg",
+    duration: "03:21",
+    codesngs: "12610",
+  },
+  {
+    title: "1mandemutoi.exe",
+    artist: "kaitolit ft. Gió",
+    videoId: "1aYbaGljbec",
+    imageUrl:
+      "https://i.pinimg.com/1200x/83/ba/04/83ba047c106b65cf3337d5b71d1582ef.jpg",
+    duration: "03:32",
+    codesngs: "12710",
   },
 ];
 
