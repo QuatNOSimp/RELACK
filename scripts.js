@@ -1300,10 +1300,19 @@ const artists = [
 
 // Khi YouTube API sẵn sàng
 function onYouTubeIframeAPIReady() {
+  const container = document.getElementById("youtube-player");
+
+  if (container) {
+    container.setAttribute(
+      "allow",
+      "autoplay; encrypted-media; picture-in-picture; fullscreen",
+    );
+  }
+
   player = new YT.Player("youtube-player", {
-    height: "0", // Ẩn video, chỉ phát âm thanh
+    height: "0",
     width: "0",
-    videoId: songs[currentSongIndex].videoId, // ID video mặc định
+    videoId: songs[currentSongIndex].videoId,
     playerVars: {
       autoplay: 0,
       controls: 0,
@@ -1311,6 +1320,8 @@ function onYouTubeIframeAPIReady() {
       showinfo: 0,
       fs: 0,
       modestbranding: 1,
+      playsinline: 1,
+      origin: window.location.origin,
     },
     events: {
       onReady: onPlayerReady,
@@ -1330,7 +1341,21 @@ function onPlayerError(event) {
 function onPlayerReady(event) {
   console.log("Player đã sẵn sàng!", event.data);
 
-  // Áp dụng volume đã lưu khi YouTube player sẵn sàng
+  try {
+    const iframe = player.getIframe();
+
+    if (iframe) {
+      iframe.setAttribute(
+        "allow",
+        "autoplay; encrypted-media; picture-in-picture; fullscreen",
+      );
+
+      iframe.setAttribute("playsinline", "true");
+    }
+  } catch (err) {
+    console.warn("Không thể cấu hình iframe YouTube:", err);
+  }
+
   if (player && typeof player.setVolume === "function") {
     player.setVolume(currentVolume);
   }
