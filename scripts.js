@@ -1258,6 +1258,24 @@ const codeSongs = [
     duration: "03:32",
     codesngs: "12710",
   },
+  {
+    title: "Có Anh Ở Đây Rồi",
+    artist: "Hazel ft. Rocky CDE & Lowridaz",
+    videoId: "2MSGNIOlkAw",
+    imageUrl:
+      "https://i.pinimg.com/736x/7c/1f/a1/7c1fa185b26d5bf17d91ce2658ffd690.jpg",
+    duration: "04:30",
+    codesngs: "12810",
+  },
+  {
+    title: "Bước Đi Luôn Đi",
+    artist: "G Rose",
+    videoId: "Rpid4-zhmkg",
+    imageUrl:
+      "https://i.pinimg.com/736x/75/f0/c3/75f0c3948cc4d15987d6e60e5560e8f9.jpg",
+    duration: "02:50",
+    codesngs: "12910",
+  },
 ];
 
 const genres = [
