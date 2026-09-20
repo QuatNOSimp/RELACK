@@ -1276,6 +1276,15 @@ const codeSongs = [
     duration: "02:50",
     codesngs: "12910",
   },
+  {
+    title: "Tây Thi",
+    artist: "Guddud de Sailor ft. MC ILL",
+    videoId: "M7miVs6lYkI",
+    imageUrl:
+      "https://i.pinimg.com/736x/dd/34/df/dd34dfd32b19aa9a1c747c3663fee298.jpg",
+    duration: "03:00",
+    codesngs: "13010",
+  },
 ];
 
 const genres = [
