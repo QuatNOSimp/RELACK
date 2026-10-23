@@ -1285,6 +1285,33 @@ const codeSongs = [
     duration: "03:00",
     codesngs: "13010",
   },
+  {
+    title: "Vòng Hào Quang",
+    artist: "Lil Bevis ft Lhng & Lil Liss",
+    videoId: "9k4GDN1pZAc",
+    imageUrl:
+      "https://i.pinimg.com/736x/22/1a/19/221a19a89c005636ce22e353be731868.jpg",
+    duration: "05:46",
+    codesngs: "13110",
+  },
+  {
+    title: "Sân Khấu",
+    artist: "CCMK ft. G Rose",
+    videoId: "rq_aYW_nDrA",
+    imageUrl:
+      "https://i.pinimg.com/736x/9a/87/15/9a8715a30ec84be268fde47cf49151ae.jpg",
+    duration: "03:56",
+    codesngs: "13210",
+  },
+  {
+    title: "Tan Vỡ Tuổi 20",
+    artist: "Left Hand ft. Weedie",
+    videoId: "H36p8v_G36M",
+    imageUrl:
+      "https://i.pinimg.com/736x/3b/96/2c/3b962c46211617a6e5b19752ba65a271.jpg",
+    duration: "03:36",
+    codesngs: "13310",
+  },
 ];
 
 const genres = [
