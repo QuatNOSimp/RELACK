@@ -1232,12 +1232,12 @@ const codeSongs = [
     codesngs: "12410",
   },
   {
-    title: "Gọi Anh Là Gió",
-    artist: "Gió",
-    videoId: "QTTDzkzmE4E",
+    title: "Sorry",
+    artist: "Milly ft. Gió",
+    videoId: "9nhFISzeuaU",
     imageUrl:
       "https://i.pinimg.com/736x/fe/34/f1/fe34f14a6b3dcbe94747fda54b78c214.jpg",
-    duration: "02:03",
+    duration: "04:00",
     codesngs: "12510",
   },
   {
@@ -1311,6 +1311,33 @@ const codeSongs = [
       "https://i.pinimg.com/736x/3b/96/2c/3b962c46211617a6e5b19752ba65a271.jpg",
     duration: "03:36",
     codesngs: "13310",
+  },
+  {
+    title: "Tử Tế",
+    artist: "Playboicamau ft. HNGLE",
+    videoId: "0za6YLO5mhU",
+    imageUrl:
+      "https://i.pinimg.com/1200x/a9/6c/25/a96c25235ae049137b6b4b1dfac90137.jpg",
+    duration: "03:36",
+    codesngs: "13410",
+  },
+  {
+    title: "Cuộc Đời Mỗi Chúng Ta",
+    artist: "Y5T ft. Jayzu",
+    videoId: "0ty2QMhEukw",
+    imageUrl:
+      "https://i.pinimg.com/736x/0c/c8/ce/0cc8ced7500a0d0d5cf645ac04a17880.jpg",
+    duration: "04:10",
+    codesngs: "13510",
+  },
+  {
+    title: "Cần Đẩu Cần Đâu",
+    artist: "Đoàn Thúy Trang ft. Đảo Tử A1J",
+    videoId: "FfosLa5YzhA",
+    imageUrl:
+      "https://i.pinimg.com/736x/1e/26/22/1e2622aa647c47af0d4d972064a77ba1.jpg",
+    duration: "04:06",
+    codesngs: "13610",
   },
 ];
 
