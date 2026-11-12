@@ -1339,6 +1339,15 @@ const codeSongs = [
     duration: "04:06",
     codesngs: "13610",
   },
+  {
+    title: "Vệt Nắng Nhạt Phai",
+    artist: "KaiYeuNhac x Xưa Lâm",
+    videoId: "SEqeZJfRDMs",
+    imageUrl:
+      "https://i.pinimg.com/736x/aa/50/c8/aa50c8505adbc29d0cf52a2fe76cb1da.jpg",
+    duration: "04:29",
+    codesngs: "13710",
+  },
 ];
 
 const genres = [
