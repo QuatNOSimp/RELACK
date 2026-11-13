@@ -854,12 +854,12 @@ const codeSongs = [
     codesngs: "08210",
   },
   {
-    title: "Blue Tequila",
-    artist: "Táo",
-    videoId: "hTGcMk_QXEg",
+    title: "Nhớ Em's",
+    artist: "Rocky CDE ft. Khan",
+    videoId: "1qPDgh6ntkE",
     imageUrl:
       "https://i.pinimg.com/736x/92/f1/a1/92f1a1cf2bb5c4857f96b46b5c28c4ae.jpg",
-    duration: "04:21",
+    duration: "03:36",
     codesngs: "08310",
   },
   {
@@ -1348,6 +1348,33 @@ const codeSongs = [
     duration: "04:29",
     codesngs: "13710",
   },
+  {
+    title: "MoPhai",
+    artist: "Xoxad",
+    videoId: "bz1Acs03rPw",
+    imageUrl:
+      "https://i.pinimg.com/736x/06/8e/ba/068eba7e95d363074e963e411dea091c.jpg",
+    duration: "02:37",
+    codesngs: "13810",
+  },
+  {
+    title: "Simp Gái 808",
+    artist: "Low G",
+    videoId: "6aBnhxRvmok",
+    imageUrl:
+      "https://i.pinimg.com/1200x/44/2e/9f/442e9ff74ce4fab4c2b2e598a3ab5b3d.jpg",
+    duration: "02:42",
+    codesngs: "13910",
+  },
+  {
+    title: "Tán Gái 505",
+    artist: "Low G",
+    videoId: "P2bTHVaa25w",
+    imageUrl:
+      "https://i.pinimg.com/1200x/1b/8b/24/1b8b24222c8da21dae0f849c823181db.jpg",
+    duration: "02:35",
+    codesngs: "14010",
+  },
 ];
 
 const genres = [
@@ -1388,7 +1415,6 @@ const artists = [
   "Ecc",
 ];
 
-// Khi YouTube API sẵn sàng
 function onYouTubeIframeAPIReady() {
   const container = document.getElementById("youtube-player");
 
@@ -1427,7 +1453,6 @@ function onPlayerError(event) {
   nextSong();
 }
 
-// Khi player sẵn sàng
 function onPlayerReady(event) {
   console.log("Player đã sẵn sàng!", event.data);
 
@@ -1453,10 +1478,9 @@ function onPlayerReady(event) {
 
 if (currentSongIndex >= [...songs, ...hiddenSongs, ...codeSongs].length) {
   console.error("Chỉ số bài hát vượt quá phạm vi danh sách!");
-  currentSongIndex = 0; // Đặt về bài đầu tiên nếu có lỗi
+  currentSongIndex = 0;
 }
 
-// Listen Now
 const listenNowButton = document.querySelector(
   ".trending .left .info .buttons .listen_now",
 );
@@ -1465,13 +1489,12 @@ listenNowButton.addEventListener("click", () => {
   playSong([...songs, ...hiddenSongs, ...codeSongs]);
 });
 
-const initialDisplayCount = 12; // Số lượng mục hiển thị ban đầu
-let currentDisplay = "genres"; // Trạng thái mặc định là genres
+const initialDisplayCount = 12;
+let currentDisplay = "genres";
 
-// Hàm render danh sách
 function renderList(items, containerId, type, showAll = false) {
   const container = document.getElementById(containerId);
-  container.innerHTML = ""; // Xóa nội dung cũ để tránh chồng lấn
+  container.innerHTML = "";
 
   const displayCount = showAll ? items.length : initialDisplayCount;
   const displayItems = items.slice(0, displayCount);
@@ -1483,7 +1506,6 @@ function renderList(items, containerId, type, showAll = false) {
     container.appendChild(div);
   });
 
-  // Quản lý nút "See all"
   const seeAllButton = document.getElementById("see-all-artists");
   if (showAll || items.length <= initialDisplayCount) {
     seeAllButton.textContent = "Hide";
@@ -1491,7 +1513,6 @@ function renderList(items, containerId, type, showAll = false) {
     seeAllButton.textContent = "See all";
   }
 
-  // Cập nhật trạng thái hiển thị
   currentDisplay = type;
 }
 
@@ -1933,10 +1954,9 @@ function startAlarm() {
 
   alarmTimeout = setTimeout(() => {
     showAlarmNotification();
-    playAlarm(); // Phát nhạc báo thức
+    playAlarm();
   }, timeUntilAlarm);
 
-  // Hiển thị đếm ngược
   alarmInterval = setInterval(() => {
     const remainingTime = alarmDate - new Date();
     if (remainingTime <= 0) {
@@ -1947,7 +1967,6 @@ function startAlarm() {
   }, 1000);
 }
 
-// Hàm để dừng báo thức
 function clearAlarm() {
   if (alarmTimeout) {
     clearTimeout(alarmTimeout);
@@ -1955,10 +1974,9 @@ function clearAlarm() {
   if (alarmInterval) {
     clearInterval(alarmInterval);
   }
-  stopAlarm(); // Dừng nhạc báo thức
+  stopAlarm();
 }
 
-// Hàm để phát nhạc báo thức
 function playAlarm() {
   alert("Hết Thời gian bạn êyyyy!!");
   const alarmVideoId = "hqt0goNf_nA";
@@ -1966,7 +1984,6 @@ function playAlarm() {
   player.playVideo();
 }
 
-// Hàm để dừng nhạc báo thức
 function stopAlarm() {
   player.stopVideo();
 }
@@ -1991,7 +2008,6 @@ if (volumeSlider) {
   volumeSlider.value = currentVolume;
 }
 
-// Cập nhật biểu tượng theo mức âm lượng
 function updateVolumeIcon(volume) {
   if (volume == 0) {
     volumeIcon.className = "bx bx-volume-mute";
@@ -2018,22 +2034,18 @@ function applyVolume(volume) {
   localStorage.setItem(VOLUME_STORAGE_KEY, currentVolume);
 }
 
-// Khi kéo slider volume
 if (volumeSlider) {
   volumeSlider.addEventListener("input", (e) => {
     applyVolume(e.target.value);
   });
 }
 
-// Click icon để mute/unmute
 if (volumeIcon) {
   volumeIcon.addEventListener("click", () => {
     if (currentVolume > 0) {
-      // Lưu lại volume trước khi mute
       localStorage.setItem(PREV_VOLUME_KEY, currentVolume);
       applyVolume(0);
     } else {
-      // Khôi phục volume trước khi bị mute
       const prevVolume = Number(localStorage.getItem(PREV_VOLUME_KEY)) || 100;
       applyVolume(prevVolume);
     }
@@ -2042,14 +2054,12 @@ if (volumeIcon) {
 
 updateVolumeIcon(currentVolume);
 
-// Thay đổi âm lượng khi kéo slider
 volumeSlider.addEventListener("input", (e) => {
   currentVolume = e.target.value;
   player.setVolume(currentVolume);
   updateVolumeIcon(currentVolume);
 });
 
-// Click icon để mute/unmute
 volumeIcon.addEventListener("click", () => {
   if (currentVolume > 0) {
     currentVolume = 0;
@@ -2061,7 +2071,6 @@ volumeIcon.addEventListener("click", () => {
   updateVolumeIcon(currentVolume);
 });
 
-// Khởi tạo âm lượng khi load trang
 window.addEventListener("load", () => {
   if (volumeSlider) {
     volumeSlider.value = currentVolume;
@@ -2074,7 +2083,6 @@ window.addEventListener("load", () => {
   }
 });
 
-// Thêm hiệu ứng hover
 const volumeContainer = document.querySelector(".volume-container");
 const volumeSliderWrapper = document.querySelector(".volume-slider-wrapper");
 
@@ -2088,29 +2096,23 @@ volumeContainer.addEventListener("mouseleave", () => {
   volumeSliderWrapper.style.visibility = "hidden";
 });
 
-// Thêm vào cuối file scripts.js
-// Theme Toggle
 const themeToggle = document.getElementById("theme-toggle");
 
-// Kiểm tra theme đã lưu
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   document.body.classList.add(savedTheme);
   updateThemeIcon();
 }
 
-// Xử lý sự kiện click
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("light-mode");
 
-  // Lưu trạng thái vào localStorage
   const isLightMode = document.body.classList.contains("light-mode");
   localStorage.setItem("theme", isLightMode ? "light-mode" : "");
 
   updateThemeIcon();
 });
 
-// Cập nhật icon
 function updateThemeIcon() {
   const isLightMode = document.body.classList.contains("light-mode");
   themeToggle.classList.toggle("bx-moon", !isLightMode);
@@ -2151,18 +2153,15 @@ async function initSongs() {
   const allSongs = [...songs, ...hiddenSongs, ...codeSongs];
 
   for (const song of allSongs) {
-    // Nếu đã có duration hợp lệ rồi thì không cần gọi API nữa
     if (song.duration && song.duration !== "null") {
       continue;
     }
 
     const apiDuration = await getVideoDuration(song.videoId);
 
-    // Chỉ cập nhật khi API trả về giá trị hợp lệ
     if (apiDuration) {
       song.duration = apiDuration;
     } else {
-      // API lỗi thì giữ duration cũ, nếu không có thì hiển thị placeholder
       song.duration = song.duration || "--:--";
     }
   }
@@ -2231,14 +2230,14 @@ function searchSong(query) {
       const index = [...songs, ...hiddenSongs, ...codeSongs].indexOf(song);
       currentSongIndex = index;
       playSong([...songs, ...hiddenSongs, ...codeSongs]);
-      renderSongList([...songs, ...hiddenSongs, ...codeSongs]); // Cập nhật danh sách hiển thị
-      searchInput.value = ""; // Xóa ô input sau khi tìm thấy
+      renderSongList([...songs, ...hiddenSongs, ...codeSongs]);
+      searchInput.value = "";
     } else {
       const index = [...songs, ...hiddenSongs, ...codeSongs].indexOf(songif2);
       currentSongIndex = index;
       playSong([...songs, ...hiddenSongs, ...codeSongs]);
-      renderSongList([...songs, ...hiddenSongs, ...codeSongs]); // Cập nhật danh sách hiển thị
-      searchInput.value = ""; // Xóa ô input sau khi tìm thấy
+      renderSongList([...songs, ...hiddenSongs, ...codeSongs]);
+      searchInput.value = "";
     }
   } else {
     alert(
@@ -2247,7 +2246,6 @@ function searchSong(query) {
   }
 }
 
-// Lấy các phần tử
 const settingsModal = document.getElementById("settings-modal");
 const settingsForm = document.getElementById("settings-form");
 const closeModal = document.querySelector(".modal .close-modal");
@@ -2261,13 +2259,12 @@ document
     if (file) {
       const reader = new FileReader();
       reader.onload = function (e) {
-        avatarFile = e.target.result; // Lưu chuỗi base64 vào avatarFile
+        avatarFile = e.target.result;
       };
       reader.readAsDataURL(file);
     }
   });
 
-// Hàm hiển thị modal và điền dữ liệu hiện tại
 function showSettingsModal() {
   const currentUser = sessionStorage.getItem("currentUser");
   if (currentUser) {
@@ -2292,9 +2289,9 @@ function loadUserAvatar() {
     const userData = JSON.parse(localStorage.getItem(currentUser));
     const userAvatar = document.getElementById("userAvatar");
     if (userData && userData.avatar) {
-      userAvatar.src = userData.avatar; // Hiển thị ảnh từ localStorage
+      userAvatar.src = userData.avatar;
     } else {
-      userAvatar.src = "default-avatar.png"; // Ảnh mặc định nếu không có
+      userAvatar.src = "default-avatar.png";
     }
   }
 }
@@ -2309,15 +2306,12 @@ window.addEventListener("load", () => {
   }
 });
 
-// Gọi hàm khi trang tải
 window.onload = loadUserAvatar;
 
-// Hàm đóng modal
 function closeSettingsModal() {
   settingsModal.style.display = "none";
 }
 
-// Sự kiện click cho biểu tượng cog
 cogIcon.addEventListener("click", showSettingsModal);
 
 // Sự kiện click cho nút đóng
@@ -2378,7 +2372,6 @@ const uploadModal = document.getElementById("upload-modal");
 const uploadForm = document.getElementById("upload-form");
 const close_upload_Modal = document.querySelector("#upload-modal .close");
 
-// Hàm hiển thị modal
 function showUploadModal() {
   const currentUser = sessionStorage.getItem("currentUser");
   if (!currentUser) {
@@ -2388,21 +2381,15 @@ function showUploadModal() {
   uploadModal.style.display = "block";
 }
 
-// Hàm đóng modal
 function closeUploadModal() {
   uploadModal.style.display = "none";
-  uploadForm.reset(); // Xóa dữ liệu trong form
+  uploadForm.reset();
 }
 
-// Sự kiện click cho icon tải lên
 uploadIcon.addEventListener("click", showUploadModal);
 
-// Sự kiện click cho nút đóng
 close_upload_Modal.addEventListener("click", closeUploadModal);
 
-// ==========================================
-// EXPOSE DATA & FUNCTIONS FOR EXPLORE PAGE
-// ==========================================
 window.RELACK_PLAYER = {
   playSong: playSong,
   getCurrentIndex: () => currentSongIndex,
