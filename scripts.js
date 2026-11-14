@@ -1375,6 +1375,33 @@ const codeSongs = [
     duration: "02:35",
     codesngs: "14010",
   },
+  {
+    title: "Mothra",
+    artist: "Ronboogz ft. Wala",
+    videoId: "z4VhutQJz4M",
+    imageUrl:
+      "https://i.pinimg.com/736x/d6/27/b6/d627b61fbd6e55b739ffac8a996dea72.jpg",
+    duration: "02:47",
+    codesngs: "14110",
+  },
+  {
+    title: "Uocgicoaynoiyeutoi",
+    artist: "Lil Liem",
+    videoId: "TkMBSbnj8hY",
+    imageUrl:
+      "https://i.pinimg.com/736x/e8/1f/f5/e81ff50f6c175f1fddbd2251717f4b15.jpg",
+    duration: "02:58",
+    codesngs: "14210",
+  },
+  {
+    title: "Lâu Dài",
+    artist: "Ran ft. CM1X",
+    videoId: "02QSzUU3UgE",
+    imageUrl:
+      "https://i.pinimg.com/736x/ac/99/cc/ac99ccbca411d88132c35d56deb71adc.jpg",
+    duration: "03:34",
+    codesngs: "14310",
+  },
 ];
 
 const genres = [
