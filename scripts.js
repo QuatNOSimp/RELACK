@@ -1402,6 +1402,42 @@ const codeSongs = [
     duration: "03:34",
     codesngs: "14310",
   },
+  {
+    title: "Hẹn Em Lúc Hoa Chưa Tàn",
+    artist: "Ph4TaK",
+    videoId: "6SMfBTlEyyU",
+    imageUrl:
+      "https://i.pinimg.com/736x/b5/58/00/b55800856717904eded605c2d9bd5fa2.jpg",
+    duration: "02:39",
+    codesngs: "14410",
+  },
+  {
+    title: "Thu Cuối",
+    artist: "Mr.T ft. Yanbi & Hằng BingBoong",
+    videoId: "tN1TZAuL4P8",
+    imageUrl:
+      "https://i.pinimg.com/736x/8b/82/7e/8b827ecac508be0ea2438492b02e9ea6.jpg",
+    duration: "05:01",
+    codesngs: "14510",
+  },
+  {
+    title: "Winter Sonata",
+    artist: "Nguyễn Chill ft. Young Champ",
+    videoId: "VRr9GCqwmjc",
+    imageUrl:
+      "https://i.pinimg.com/736x/e3/fa/94/e3fa942281a5495e7a9943e169be45a7.jpg",
+    duration: "02:01",
+    codesngs: "14610",
+  },
+  {
+    title: "Anh Đóng Qua Đường Hầm Kim Liên",
+    artist: "Hazel",
+    videoId: "TzwyTXGgJuE",
+    imageUrl:
+      "https://i.pinimg.com/736x/30/a4/ed/30a4edd3d59cd4f6b64d3c1f4d84c040.jpg",
+    duration: "02:13",
+    codesngs: "14710",
+  },
 ];
 
 const genres = [
