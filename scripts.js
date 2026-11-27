@@ -1438,6 +1438,24 @@ const codeSongs = [
     duration: "02:13",
     codesngs: "14710",
   },
+  {
+    title: "Unrequited love",
+    artist: "Ngũng Truyến Dĩ ft. Godthic",
+    videoId: "Be82rDqIMFk",
+    imageUrl:
+      "https://i.pinimg.com/736x/72/0d/60/720d609ac3fab5c4e729bf0b85b9e93f.jpg",
+    duration: "02:28",
+    codesngs: "14810",
+  },
+  {
+    title: "sóng",
+    artist: "100% Nguyễn Chill ft. Naon",
+    videoId: "C_C2ZuPa4UI",
+    imageUrl:
+      "https://i.pinimg.com/736x/ba/6e/86/ba6e86aa6ef777702c1e213377229cb9.jpg",
+    duration: "03:16",
+    codesngs: "14910",
+  },
 ];
 
 const genres = [
